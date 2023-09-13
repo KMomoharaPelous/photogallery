@@ -10,6 +10,12 @@ h2 {
     font-size: 2em;
 }
 
+nav li {
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+}
+
 nav a {
     font-size: 1.5em;
 }
@@ -23,4 +29,9 @@ label,
 input,
 small {
     font-size: 1em;
+}
+
+form {
+    display: inline-block;
+    text-align: center;
 }
