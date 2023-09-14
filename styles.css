@@ -66,6 +66,7 @@ nav a {
     bottom: 0px;
     right: 0px;
     border: 3px solid #ffffff;
+    z-index: 5;
 }
 
 nav a:hover {
@@ -106,7 +107,7 @@ small {
     font-size: 1em;
 }
 
-img {
+.images {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -131,6 +132,7 @@ label {
 input {
     color: #007d7b;
     text-transform: uppercase;
+    width: 485px;
 }
 
 input[type=text], input[type=email], textarea {
@@ -141,6 +143,10 @@ input[type=text], input[type=email], textarea {
     display: block;
     text-transform: uppercase;
     padding: 10px;
+}
+
+textarea {
+    width: 485px;
 }
 
 input[type=submit] {
@@ -168,3 +174,31 @@ footer {
 }
 
 
+/* Medium-sized media screens*/
+
+@media screen and (min-width: 880px) {
+
+    body {
+        min-width: 880px;
+    }
+
+    main {
+        width: 880px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: left;
+        padding-left: 5px;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #gallery {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
