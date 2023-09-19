@@ -1,6 +1,5 @@
-* {
+* { 
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 }
 
 html {
@@ -8,96 +7,14 @@ html {
 }
 
 body {
-    margin: 0 auto;
-    display: grid;
     width: 485px;
-}
-
-header {
-    background-color: #ffffff;
-    display: grid;
-}
-
-main {
-    background-color: #ffffff;
-}
-
-h1 {
-    font-size: 3em;
-    color: #007d7b;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: 2em;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    position: relative;
-    margin: 10px 0 0;
-}
-
-nav li {
-    display: inline-flex;
-}
-
-nav a {
-    font-size: 1.5em;
-    color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
     margin: 0 auto;
-    padding: 0 10px;
-    align-items: center;
+    padding: 0 25px;
 }
 
-[href="#top"] {
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    border: 3px solid #ffffff;
-    z-index: 5;
-}
-
-nav a:hover {
-    background-color: #007d7b;
-}
-
-p {
-    font-size: 1.25em;
-    line-height: 1.5em;
-}
-
-#about p, #gallery p {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-figure {
-    position: relative;
+header, footer {
+    width: 100%;
     color: #ffffff;
-    text-align: center;
-}
-
-main figcaption {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-figcaption:nth-child(even) {
-    position: absolute;
-    top: 10px;
 }
 
 figcaption,
@@ -107,98 +24,100 @@ small {
     font-size: 1em;
 }
 
-.images {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-#contact {
-    background-color: #000000;
-    color: #ffffff;
-    padding-top: 5px;
-    text-align: center;
-}
-
-form {
-    display: inline-block;
-    text-align: center;
-}
-
-label {
-    text-transform: uppercase;
-    padding-top: 20px;
-}
-
-input {
+h1 {
+    margin: 0 auto;
     color: #007d7b;
-    text-transform: uppercase;
-    width: 485px;
-}
-
-input[type=text], input[type=email], textarea {
     background-color: #ffffff;
-    color: #007d7b;
-    font-size: 1em;
+    font-size: 3em;
     font-weight: bold;
-    display: block;
     text-transform: uppercase;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: center;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+nav {
+    background-color: #000000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
     padding: 10px;
 }
 
-textarea {
-    width: 485px;
-}
-
-input[type=submit] {
-    background-color: #007d7b;
-    border: none;
-    border-radius: 10px;
+nav a {
     color: #ffffff;
+    font-size: 1.5em;
     font-weight: bold;
-    display: block;
-    padding: 5px;
-    margin: 10px 0 30px 32px;
-    width: 150px;
-    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px;
 }
 
-input[type=submit]:hover {
-    cursor: pointer;
+nav li {
+    list-style-type: none;
 }
 
-
-footer {
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
+[href="#top"] {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 3px 3px 4px 1px #000000;
+    border: 1px solid #ffffff;
+    z-index: 2;
 }
 
-
-/* Medium-sized media screens*/
-
-@media screen and (min-width: 880px) {
-
-    body {
-        min-width: 880px;
-    }
-
-    main {
-        width: 880px;
-        margin: 0 auto;
-    }
-
-    h1 {
-        text-align: left;
-        padding-left: 5px;
-    }
-
-    .images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #gallery {
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
+a:hover {
+    color: #007d7b;
+    background-color: #ffffff;
 }
+
+#about, #gallery {
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#images {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+figure {
+    display: grid;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    height: fit-content;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    padding: 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 420px;
+    float: left;
+    text-transform: uppercase;
+}
+
